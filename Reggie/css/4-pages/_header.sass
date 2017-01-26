@@ -1,0 +1,116 @@
+
+.overlay
+	position: relative
+	width: 100%
+	margin: 0
+	padding: 0
+
+
+	video
+		width: 100%
+		z-index: 0
+
+	&:before
+		content: ''
+		position: absolute
+		background: rgba(0, 0, 0, 0.8)
+		border-radius: 5px
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+
+
+#headline
+	text-align: center
+	width: auto
+	z-index: 1
+	position: absolute
+	top: 80px
+	line-height: 80px
+	font-family: orbitron
+	color: white
+	text-transform: uppercase
+	font-size: 60px
+	font-weight: 300
+	letter-spacing: 1.8em
+
+
+//#floatreg
+	//display: inline-block
+	//width: 100%
+	//max-height: 600px
+	//max-width: 600px
+//	left: 50%
+	//margin-left: -300px
+//	top: 70%
+	//margin-top: -300px
+	//position: absolute
+//	z-index: 1
+
+
+#audio
+	display: none
+
+.header-content
+	position: relative
+
+#floatreg
+	position: absolute
+	max-width: 80%
+	top: 10%
+	left: 10%
+	border-radius: 3px
+	z-index: 1
+	//box-shadow: 0 3px 6px rgba(0,0,0,0.9)
+
+
+	&:empty
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+
+@media screen and (orientation: portrait)
+	#floatreg
+		max-width: 40%
+
+
+@media screen and (orientation: landscape)
+	#floatreg
+		max-height: 40%
+
+
+.nav
+	list-style: none
+	display: inline-flex
+	align-content: space-around
+	flex-flow: row-wrap
+	width: 100%
+	background: rgba(0,0,0,0.8)
+	position: fixed
+	top: 0
+	z-index: 1000
+
+	.menu-item
+		width: 60px
+		padding: 20px 40px 20px 40px
+		margin: auto
+		text-align: center
+		text-transform: uppercase
+		font-family: orbitron
+
+		a
+			&:hover
+				transition: all 1s ease-in
+				color: #000ff1
+			&:focus
+				transition: all 1s ease-in
+				color: #000ff1
+			&:active
+				transition: all 1s ease-in
+				color: #000ff1
+
+		a
+			text-decoration: none
+			color: white
