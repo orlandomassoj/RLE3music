@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="../css/1-tools/animate.css">
 
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -29,7 +30,7 @@
   <header>
 
     <nav>
-      <ul class="nav">
+      <ul class="nav default-nav" id="nav">
         <li class="menu-item"><a href="#">bio</a></li>
         <li class="menu-item"><a href="#">media</a></li>
         <li class="menu-item"><a href="#">gallery</a></li>
@@ -38,19 +39,20 @@
 
     </nav>
     <div class="header-content">
-
-      <img class="img-fluid" alt="Responsive image" id="floatreg" src="../img/floatingreg.png"/>
-      <h1 id="headline">Reginald Ellison</h1>
-
       <div class="overlay">
         <video playsinline autoplay muted loop poster="" id="bgvid">
           <source src="../img/timelapse.mp4" type="video/mp4">
         </video>
       </div>
+
+      <img class="img-fluid" alt="Responsive image" id="floatreg" src="../img/floatingreg.png"/>
+      <h1 id="headline">Reginald Ellison</h1>
+
       <audio id="audio">
         <source src="../img/sax.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
       </audio>
+
     </div>
   </header>
 
@@ -61,7 +63,7 @@
       <div class="col-md-6">
         <img src="../img/reg.png" id="scrollreg" />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="scrollbio">
         <h2 class="bio-headline">bio</h2>
         <p class="bio-text">I am Reginald Ellison, a South-Florida based saxophonist. Born and raised in Ft. Lauderdale, FL I began playing the saxophone at the age of 10 in my school's band and have been playing ever since. I continued my studies at both the University of Central Florida located in Orlando, FL, as well as Palm Beach Atlantic University where my focus was Music Performance and Hospitality.
     I perform in a wide spectrum of venues and events such as hotels, restaurants, fashion shows, weddings, bar mitzvahs, night clubs, corporate functions and more. I perform locally throughout South Florida in cities such as Miami, Boca Raton, Delray Beach and West Palm Beach. I do travel out of state for special events, and those cities thus far would include Chicago, Dallas, Los Angeles and Denver, with more venues and locations still yet to be performed in.
@@ -79,24 +81,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 video-player">
-          <div class="video-container">
-            <div id="cp_widget_32580cb6-4038-4eac-afba-f40dcc55b085">...</div>
-            <script type="text/javascript">
-            var cpo = [];
-            cpo["_object"] = "cp_widget_32580cb6-4038-4eac-afba-f40dcc55b085";
-            cpo["_fid"] = "AEFAN39w7G9S";
-            var _cpmp = _cpmp || [];
-            _cpmp.push(cpo);
-            (function() {
-                var cp = document.createElement("script");
-                cp.type = "text/javascript";
-                cp.async = true;
-                cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                var c = document.getElementsByTagName("script")[0];
-                c.parentNode.insertBefore(cp, c);
-            })();
-            </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/media-platform/html-slideshow'>Slideshow HTML</a> for Business solution.<span>New Gallery 2017/1/20</span><span>bitrate</span><span> 1845 kb/s</span><span>height</span><span> 720</span><span>duration</span><span> 00:00:58.96</span><span>fps</span><span> 29.90</span><span>width</span><span> 720</span><span>originaldate</span><span> 2016-11-09 22:37:52</span><span>bitrate</span><span> 1184 kb/s</span><span>height</span><span> 720</span><span>duration</span><span> 00:05:29.61</span><span>fps</span><span> 30</span><span>width</span><span> 406</span><span>originaldate</span><span> 2015-12-12 11:38:44</span><span>bitrate</span><span> 403 kb/s</span><span>height</span><span> 360</span><span>duration</span><span> 00:00:40.70</span><span>fps</span><span> 25.90</span><span>width</span><span> 638</span><span>originaldate</span><span> 2016-11-08 20:04:43</span></noscript>
-          </div>
+
         </div>
       </div>
     </div>
@@ -228,10 +213,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="../js/jquery.textfill.min.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/functions.js" type="text/javascript"></script>
     <script src="../js/wow.js"></script>
+    <script>
+    jQuery("#headline").fitText();
+    </script>
 
   </body>
 </html>

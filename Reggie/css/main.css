@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(animate.css);
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
 @import url(bootstrap.min.css);
 html {
@@ -2471,13 +2472,18 @@ body {
 @media screen and (orientation: landscape) {
   #floatreg {
     max-height: 40%; } }
+.default-nav {
+  background: rgba(0, 0, 0, 0.3); }
+
+.scroll-nav {
+  background: #16f2ea; }
+
 .nav {
   list-style: none;
   display: inline-flex;
   align-content: space-around;
   flex-flow: row-wrap;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   z-index: 1000; }
@@ -2487,23 +2493,24 @@ body {
     margin: auto;
     text-align: center;
     text-transform: uppercase;
+    font-size: 18px;
     font-family: orbitron; }
     .nav .menu-item a:hover {
-      transition: all 1s ease-in;
-      color: #000ff1; }
+      transition: all 0.5s ease-in;
+      color: white; }
     .nav .menu-item a:focus {
-      transition: all 1s ease-in;
-      color: #000ff1; }
+      transition: all 0.5s ease-in;
+      color: #white; }
     .nav .menu-item a:active {
-      transition: all 1s ease-in;
-      color: #000ff1; }
+      transition: all 0.5s ease-in;
+      color: #white; }
     .nav .menu-item a {
       text-decoration: none;
-      color: white; }
+      color: #666666; }
 
 footer {
   height: 220px;
-  background: black; }
+  background: #16f2ea; }
   footer div {
     text-align: center;
     vertical-align: middle; }
@@ -2553,7 +2560,7 @@ section {
 
 .media {
   height: 960px;
-  background: #16f2ea;
+  background: white;
   overflow: scroll; }
   .media .col-sm-4 {
     width: 100%; }
@@ -2562,7 +2569,7 @@ section {
     font-family: orbitron;
     font-size: 36px;
     text-align: center;
-    color: white;
+    color: #2e2e2f;
     padding-top: 60px; }
 
 .video-player {
@@ -2573,8 +2580,7 @@ section {
   height: 100px; }
 
 .photos {
-  height: 1100px;
-  background: #577077; }
+  height: 960px; }
 
 .photo-text {
   text-transform: uppercase;
@@ -2582,7 +2588,7 @@ section {
   font-size: 36px;
   text-align: center;
   padding-top: 60px;
-  color: white; }
+  color: #2e2e2f; }
 
 #carousel-container {
   height: 900px;
@@ -2603,7 +2609,7 @@ section {
 
 .contact {
   height: 900px;
-  background: #777;
+  background: white;
   position: relative; }
 
 .contact-text {
